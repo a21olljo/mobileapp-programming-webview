@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         myWebView = findViewById(R.id.my_webview);
         myWebView.loadUrl("https://his.se");
+        myWebView.getSettings().setJavaScriptEnabled(true);
 
         /*
         FloatingActionButton fab = findViewById(R.id.fab);
