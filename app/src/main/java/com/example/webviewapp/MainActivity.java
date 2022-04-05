@@ -30,10 +30,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         /*
-        * Rename your App. Tip: Values->Strings
-        * Enable Internet access for your App. Tip: Manifest
-        * Create a WebView element in the layout file content_main.xml
-        * Give the WebView element ID "my_webview"
         -- Commit and push to your github fork
         * Create a private member variable called "myWebView" of type WebView
         * Locate the WebView element created in step 1 using the ID created in step 2
@@ -54,14 +50,8 @@ public class MainActivity extends AppCompatActivity {
            one (1) screenshot showing your external web page.
         */
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
+
     }
 
     @Override
