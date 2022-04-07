@@ -1,42 +1,29 @@
 
 # Rapport
 
-**Skriv din rapport här!**
+-Det första som gjordes var att koden nedan tillades i filen AndroidManifest.
+````
+    <uses-permission android:name="android.permission.INTERNET" />
+````
 
-_Du kan ta bort all text som finns sedan tidigare_.
+-Därefter ändrades elementet TextView till WebView, därmed lades även ID:et "my_webview" till.
+````
+<WebView
+    android:id="@+id/my_webview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+/>
+````
 
-## Följande grundsyn gäller dugga-svar:
+-Sedan skapades en private variable i Klassen MainActivity, vilken tillsammans med det som skapats tidigare gav möjligheten att komma åt en extern webbsida (se bilder). 
+-Därefter gjordes en enkel html sida (se bilder), vilken genom koden nedan, kunde även den ses i appen. 
+````
+myWebView.loadUrl("file:///android_asset/myPage.html");
+````
 
-- Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
-- Svaret skall ha minst en snutt programkod.
-- Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
-- Svaret skall ha minst en skärmdump. Skärmdumpar skall illustrera exekvering av relevant programkod. Eventuell text i skärmdumpar måste vara läsbar.
-- I de fall detta efterfrågas, dela upp delar av ditt svar i för- och nackdelar. Dina för- respektive nackdelar skall vara i form av punktlistor med kortare stycken (3-4 meningar).
+-Sist användes en dropdown menu för att enkelt kunna navigera mellan både den externa och interna sidan.
 
-Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
 
-```
-function errorCallback(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            // Geolocation API stöds inte, gör något
-            break;
-        case error.POSITION_UNAVAILABLE:
-            // Misslyckat positionsanrop, gör något
-            break;
-        case error.UNKNOWN_ERROR:
-            // Okänt fel, gör något
-            break;
-    }
-}
-```
 
-Bilder läggs i samma mapp som markdown-filen.
-
-![](android.png)
-
-Läs gärna:
-
-- Boulos, M.N.K., Warren, J., Gong, J. & Yue, P. (2010) Web GIS in practice VIII: HTML5 and the canvas element for interactive online mapping. International journal of health geographics 9, 14. Shin, Y. &
-- Wunsche, B.C. (2013) A smartphone-based golf simulation exercise game for supporting arthritis patients. 2013 28th International Conference of Image and Vision Computing New Zealand (IVCNZ), IEEE, pp. 459–464.
-- Wohlin, C., Runeson, P., Höst, M., Ohlsson, M.C., Regnell, B., Wesslén, A. (2012) Experimentation in Software Engineering, Berlin, Heidelberg: Springer Berlin Heidelberg.
+![](Screenshot_external.png)
+![](Screenshot_internal.png)
